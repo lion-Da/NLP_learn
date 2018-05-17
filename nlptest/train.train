@@ -1,0 +1,2 @@
+These fields are used to provide further infomation about how tokens should be identified<SPLIT>,
+They can help identify breaks between numbers<SPLIT>, such as 23.6<SPLIT>,punctuation characters such as commas<SPLIT>.
