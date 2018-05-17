@@ -9,7 +9,8 @@ Lingpipe version 4.1.2
 IDE -> netbeans 8.2
 java jdk -> openjdk 8
 os -> ubuntu 16.04
-所用到的jar已经打包
+所用到的jar过大无法打包
+model文件夹会逐步更新
 
 
 2章-文本分词 （java方法和NLP方法）
