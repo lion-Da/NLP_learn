@@ -6,8 +6,7 @@
 package NlpLearn;
 
 
-
-
+//书中第一章简述代码 及第二章文本分词代码
 //java
 
 
@@ -484,16 +483,7 @@ public class NlpLearn {
         {
             print(token);
         }
-        */
-        
-        // page 60 SBD
-        // java re [^.!?\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^.!?]*)*[.!?]?['"]?(?=\s|$)
-        // BreakIterator 之前实现过
-        
-        /*****
-         * NLP API 
-         */
-        // openNLP
-        
+        */     
+ 
     }
 }
