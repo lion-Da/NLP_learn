@@ -5,3 +5,8 @@ java学习nlp库的使用
 apache OpenNLP version 1.8.4
 stanford NLP version 2018-2-27
 Lingpipe version 4.1.2
+
+IDE -> netbeans 8.2
+java jdk -> openjdk 8
+os -> ubuntu 16.04
+所用到的jar已经打包
