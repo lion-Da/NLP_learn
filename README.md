@@ -10,3 +10,7 @@ IDE -> netbeans 8.2
 java jdk -> openjdk 8
 os -> ubuntu 16.04
 所用到的jar已经打包
+
+
+2章-文本分词 （java方法和NLP方法）
+3章-文本断句
