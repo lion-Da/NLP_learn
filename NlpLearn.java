@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication2;
+package NlpLearn;
 
 
 
@@ -78,7 +78,7 @@ import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
  * @author dalion
  */
 
-public class JavaApplication2 {
+public class NlpLearn {
     static String para = "Let`s pause, ant then reflect.";
     public static void print(String s)
     {
@@ -95,30 +95,30 @@ public class JavaApplication2 {
         /*
         try(InputStream is = new FileInputStream(new File("/home/dalion/nlptest/","en-token.bin")))
         {
-        TokenizerModel model = new TokenizerModel(is);
-        Tokenizer tokenizer = new TokenizerME(model);
-        String tokens[] = tokenizer.tokenize("You can use OpenNLP with any language, demo models are provided here.\n" +
-        "\n" +
-        "The models are fully compatible with the latest release, they can be used for testing or getting started.\n" +
-        "\n" +
-        "Please train your own models for all other use cases.\n" +
-        "\n" +
-        "Documentation, including Mr.tom, code usage and command-line interface examples are available here\n" +
-        "\n" +
-        "You can also follow our mailing lists for news and updates.");
-        for (String i : tokens)
-        {
-        System.out.println(i);
-        }
-        System.out.println("OVER!!");
+            TokenizerModel model = new TokenizerModel(is);
+            Tokenizer tokenizer = new TokenizerME(model);
+            String tokens[] = tokenizer.tokenize("You can use OpenNLP with any language, demo models are provided here.\n" +
+            "\n" +
+            "The models are fully compatible with the latest release, they can be used for testing or getting started.\n" +
+            "\n" +
+            "Please train your own models for all other use cases.\n" +
+            "\n" +
+            "Documentation, including Mr.tom, code usage and command-line interface examples are available here\n" +
+            "\n" +
+            "You can also follow our mailing lists for news and updates.");
+            for (String i : tokens)
+            {
+                System.out.println(i);
+            }
+                System.out.println("OVER!!");
         }
         catch(FileNotFoundException ex)
         {
-        System.out.println("FIlenotefound");
+            System.out.println("FIlenotefound");
         }
         catch(IOException ex)
         {
-        System.out.println("IOexception");
+            System.out.println("IOexception");
         }
         }
          */
@@ -128,17 +128,17 @@ public class JavaApplication2 {
         Document doc = new Document("add your text here! It can contain multiple sentences.");
         for (Sentence sent : doc.sentences()) {  // Will iterate over two sentences
         // We're only asking for words -- no need to load any models yet
-        System.out.println("The second word of the sentence '" + sent + "' is " + sent.word(0));
+            System.out.println("The second word of the sentence '" + sent + "' is " + sent.word(0));
         // When we ask for the lemma, it will load and run the part of speech tagger
-        System.out.println("The third lemma of the sentence '" + sent + "' is " + sent.lemma(2));
+            System.out.println("The third lemma of the sentence '" + sent + "' is " + sent.lemma(2));
         // When we ask for the parse, it will load and run the parser
-        System.out.println("The parse of the sentence '" + sent + "' is " + sent.parse());
+            System.out.println("The parse of the sentence '" + sent + "' is " + sent.parse());
         // ...
         }
         PTBTokenizer ptb = new PTBTokenizer(new StringReader("do you like Mr.Smith."),new CoreLabelTokenFactory(),null);
         while(ptb.hasNext())
         {
-        System.out.println(ptb.next());
+            System.out.println(ptb.next());
         }
          */
         // here is lingpipe
@@ -162,38 +162,38 @@ public class JavaApplication2 {
         List<String> sent = new LinkedList<String>();
         for (List<HasWord> e : documentpreprocessor)
         {
-        StringBuilder sb = new StringBuilder();
-        List<HasWord> hasWordList = e;
+            StringBuilder sb = new StringBuilder();
+            List<HasWord> hasWordList = e;
         for (HasWord token : hasWordList)
         {
-        sb.append(token).append(" ");
+            sb.append(token).append(" ");
         }
-        sent.add(sb.toString());
+            sent.add(sb.toString());
         }
         for (String s : sent)
         {
-        System.out.println(s);
+            System.out.println(s);
         }
          */
         // page 15 code FAILED
         /*
         try
         {
-        String[] sent =
-        {"Tim was a good neighbor. Perhaps not as good as Bob, but still pretty good. Of course Mr.Adam took the cake!"};
-        Tokenizer tokenizer = SimpleTokenizer.INSTANCE;
-        TokenNameFinderModel model = new TokenNameFinderModel(new File("/home/dalion/nlptest","es-ner-person.bin"));
-        NameFinderME finder = new NameFinderME(model);
-        for (String s : sent)
-        {
-        String[] tokens = tokenizer.tokenize(s);
-        Span[] nameSpans = finder.find(tokens);
-        System.out.println(Arrays.toString(Span.spansToStrings(nameSpans, s)));
-        }
+            String[] sent =
+            {"Tim was a good neighbor. Perhaps not as good as Bob, but still pretty good. Of course Mr.Adam took the cake!"};
+            Tokenizer tokenizer = SimpleTokenizer.INSTANCE;
+            TokenNameFinderModel model = new TokenNameFinderModel(new File("/home/dalion/nlptest","es-ner-person.bin"));
+            NameFinderME finder = new NameFinderME(model);
+            for (String s : sent)
+            {
+                String[] tokens = tokenizer.tokenize(s);
+                Span[] nameSpans = finder.find(tokens);
+                System.out.println(Arrays.toString(Span.spansToStrings(nameSpans, s)));
+            }
         }
         catch(IOException ex)
         {
-        ex.printStackTrace();
+            ex.printStackTrace();
         }
          */
         // page 16 code
@@ -205,7 +205,7 @@ public class JavaApplication2 {
         String tags[] = tagger.tag(tokens);
         for(int i=0;i<tokens.length;i++)
         {
-        System.out.println(tokens[i]+"["+tags[i]+"]");
+            System.out.println(tokens[i]+"["+tags[i]+"]");
         }
          */
         //page 18 code
@@ -226,12 +226,12 @@ public class JavaApplication2 {
         List<String> list = new ArrayList<String>();
         while(scan.hasNext())
         {
-        String token = scan.next();
-        list.add(token);
+            String token = scan.next();
+            list.add(token);
         }
         for (String t : list)
         {
-        System.out.println(t);
+            System.out.println(t);
         }
          */
         //page 30 code
@@ -242,7 +242,7 @@ public class JavaApplication2 {
         String token[] = text.split(re);// split(re,2) present for re twice;
         for (String s : token)
         {
-        System.out.println(s);
+            System.out.println(s);
         }
          */
         // page 31 code
@@ -255,12 +255,12 @@ public class JavaApplication2 {
         //find last end
         while(boundary != BreakIterator.DONE)
         {
-        int begin = boundary;
-        System.out.println(boundary + "-");
-        boundary = wordIterator.next();
-        int end = boundary;
-        if(end == BreakIterator.DONE)   break;
-        System.out.println(boundary+" ["+text.substring(begin,end)+"]");
+            int begin = boundary;
+            System.out.println(boundary + "-");
+            boundary = wordIterator.next();
+            int end = boundary;
+            if(end == BreakIterator.DONE)   break;
+            System.out.println(boundary+" ["+text.substring(begin,end)+"]");
         }
          */
         // page 34 code
@@ -491,7 +491,7 @@ public class JavaApplication2 {
         // BreakIterator 之前实现过
         
         /*****
-         * NLP API
+         * NLP API 
          */
         // openNLP
         
