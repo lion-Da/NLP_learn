@@ -13,5 +13,6 @@ os -> ubuntu 16.04
 model文件夹会逐步更新
 
 
-2章-文本分词 （java方法和NLP方法）
-3章-文本断句
+2章-文本分词 （finished）
+3章-文本断句 （finished）
+4章-人物识别 （coding）
