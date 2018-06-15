@@ -16,3 +16,5 @@ model文件夹会逐步更新
 2章-文本分词 （finished）
 3章-文本断句 （finished）
 4章-人物识别 （coding）
+
+需求变更 Hanlp 分词+摘要提取
